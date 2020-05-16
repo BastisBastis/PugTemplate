@@ -2,14 +2,14 @@ extends default
 
 block content
   div.main
-    if operator === 0
+    if operator == 0
       | p.result #{a} #{b} #{result}
-    //else if #{operator} === 1
-      //p.result #{a} - #{b} = #{result}
-    //else if #{operator} === 2
-      //p.result #{a} / #{b} = #{result}
-    //else if #{operator} === 3
-      //p.result #{a} * #{b} = #{result}
+    else if operator == 1
+      p.result #{a} - #{b} = #{result}
+    else if operator == 2
+      p.result #{a} / #{b} = #{result}
+    else if operator == 3
+      p.result #{a} * #{b} = #{result}
         
     form(method="GET" action="/")
       input#a(type="number" name="a")
