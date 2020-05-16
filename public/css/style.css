@@ -47,4 +47,12 @@ body {
   font-size:2rem;
 }
 
+.input {
+   padding: 0 1rem;  
+}
+
+button {
+   background-color=pink;
+   border-radius = 0;
+}
 
