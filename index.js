@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   else if (req.query.operator == 1) result = Number(req.query.a)-Number(req.query.b);
   else if (req.query.operator == 2) result = Number(req.query.a)/Number(req.query.b);
   else if (req.query.operator == 3) result = Number(req.query.a)*Number(req.query.b);
-  
+  alert(result);
   
   res.render('index', {
     title: 'Homepage',
