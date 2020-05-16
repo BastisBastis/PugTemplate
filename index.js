@@ -13,8 +13,8 @@ app.get('/', (req, res) => {
   res.render('index', {
     title: 'Homepage',
     result: result,
-    a=req.query.a,
-    b=req.query.b
+    a: req.query.a,
+    b: req.query.b
   });
 });
 
