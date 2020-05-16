@@ -7,7 +7,7 @@ const app = express();
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-  res.render('index' {
+  res.render('index', {
     title: 'Homepage',
     people: people.profiles
   });
