@@ -2,17 +2,15 @@ extends default
 
 block content
   div.main
-    p.result 
-      #{a} 
-      if #{operator} === 0 
-        + 
-      else if #{operator} === 1 
-        - 
-      else if #{operator} === 2 
-        / 
-      else
-        *
-      #{b} = #{result}
+    if #{operator} === 0
+      p.result #{a} + #{b} = #{result}
+    else if #{operator} === 1
+      p.result #{a} - #{b} = #{result}
+    else if #{operator} === 2
+      p.result #{a} / #{b} = #{result}
+    else if #{operator} === 3
+      p.result #{a} * #{b} = #{result}
+        
     form(method="GET" action="/")
       input#a(type="number" name="a")
       select#operator(name="operator")
