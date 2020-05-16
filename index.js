@@ -20,7 +20,8 @@ app.get('/', (req, res) => {
     title: 'Homepage',
     result: result,
     a: req.query.a,
-    b: req.query.b
+    b: req.query.b,
+    operator: req.query.operator
   });
 });
 
