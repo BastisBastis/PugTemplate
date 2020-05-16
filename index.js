@@ -9,10 +9,12 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', (req, res) => {
-  const result = req.query.a;
+  const result = Number(req.query.a)+Number(req.query.b);
   res.render('index', {
     title: 'Homepage',
-    result: result
+    result: result,
+    a=req.query.a,
+    b=req.query.b
   });
 });
 
