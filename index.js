@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', (req, res) => {
-  const result = "";
+  const result = 0;
   if (req.query.operator === "0") { result = Number(req.query.a)+Number(req.query.b) }
   else if (req.query.operator === "1") { result = Number(req.query.a)-Number(req.query.b) }
   else if (req.query.operator === "2") { result = Number(req.query.a)/Number(req.query.b) }
