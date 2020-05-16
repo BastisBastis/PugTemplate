@@ -9,12 +9,11 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get('/', (req, res) => {
-  var result = "";
-  if (req.query.operator == 0) result = Number(req.query.a)+Number(req.query.b); 
-  else if (req.query.operator == 1) result = Number(req.query.a)-Number(req.query.b);
-  else if (req.query.operator == 2) result = Number(req.query.a)/Number(req.query.b);
-  else if (req.query.operator == 3) result = Number(req.query.a)*Number(req.query.b);
-  alert(result);
+  const result = "";
+  if (req.query.operator === "0") { result = Number(req.query.a)+Number(req.query.b); }
+  else if (req.query.operator === "1") { result = Number(req.query.a)-Number(req.query.b); }
+  else if (req.query.operator === "2") { result = Number(req.query.a)/Number(req.query.b); }
+  else if (req.query.operator === "3") { result = Number(req.query.a)*Number(req.query.b); }
   
   res.render('index', {
     title: 'Homepage',
