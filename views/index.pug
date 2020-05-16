@@ -5,8 +5,13 @@ block content
     p.result #{a} + #{b} = #{result}
     form(method="GET" action="/")
       label(for="a") A
-      input#a(type="text" name="a")
+      input#a(type="number" name="a")
       p plus
       label(for="b") B
-      input#b(type="text" name="b")
-      button(type="submit") Skicka
+      input#b(type="number" name="b")
+      select#operator(name="operator")
+        option(value="0") +
+        option(value="1") -
+        option(value="2") /
+        option(value="3") *
+      button(type="submit") Räkna ut
