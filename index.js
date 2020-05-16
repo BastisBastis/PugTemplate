@@ -1,4 +1,6 @@
 const express = require('express');
+const people = require('./people.json');
+
 const app = express();
 
 
@@ -6,7 +8,8 @@ app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
   res.render('index' {
-    title: 'Homepage'
+    title: 'Homepage',
+    people: people.profiles
   });
 });
 
